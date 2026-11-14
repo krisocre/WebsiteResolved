@@ -1,0 +1,45 @@
+REPUTATIONRESOLVED — REVIEW EVIDENCE WORKSHEET, VERSION 1.0
+Prepared 2026-11-12. A private working template, not a removal decision.
+
+1. Listing and review
+Business/listing name:
+Public listing URL or location description:
+Direct review link (if available):
+Displayed reviewer name:
+Observed star rating:
+Review text relevant to the concern:
+Date/time first observed, including time zone:
+Date/time the evidence was saved, including time zone:
+
+2. The concern
+What specific statement, relationship or content is relevant?
+Which current Google policy might apply?
+Source link for that policy:
+What can you verify directly?
+What remains unknown?
+
+3. Internal record search (if relevant)
+Date range, system and fields searched:
+Search result:
+Limits of the search (alternate names, non-booked visits, incomplete records):
+Do not conclude "never a customer" solely from a failed exact-name match.
+
+4. Supporting material
+List relevant files/links and why each is needed:
+Keep originals privately. Share only the material appropriate to the recipient.
+Remove unrelated customer, payment, health or account information from a general enquiry.
+Never include Google passwords, authentication codes or payment-card details.
+
+5. Reporting history
+Report date, channel and case/reference number:
+Decision/status as actually shown:
+Eligible appeal date and reference, if applicable:
+
+6. If a demand for money or favours is involved
+Preserve the actual messages and their timestamps/identifiers privately.
+Google's merchant-extortion guidance:
+https://support.google.com/business/answer/16404809?hl=en
+Use the requested evidence in the official reporting channel; do not publish private demands or identifiers unnecessarily.
+
+This worksheet records observations and their limits. It does not establish
+that a review violates policy or promise that Google will remove it.

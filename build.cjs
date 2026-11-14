@@ -1,0 +1,10 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const root = __dirname;
+require('./build-blog.cjs');
+const output = path.join(root, 'dist');
+if (fs.existsSync(output) && fs.lstatSync(output).isSymbolicLink()) throw Error('Build output must not be a symbolic link.');
+fs.mkdirSync(output, { recursive: true });
+for (const file of ['index.html', 'blog.html', 'styles.css', 'journal.css', 'script.js', 'navigation.js', 'journal.js', 'robots.txt']) fs.copyFileSync(path.join(root, file), path.join(output, file));
+for (const folder of ['assets','blog','data']) fs.cpSync(path.join(root, folder), path.join(output, folder), { recursive: true });
+console.log('Built the homepage, journal and two articles with research assets in dist/. Preview indexing restrictions remain. Nothing deployed.');

@@ -1,0 +1,11 @@
+{
+  "name": "reputationresolved-homepage",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A local ReputationResolved design prototype with a research journal",
+  "scripts": {
+    "preview": "node server.cjs",
+    "build": "node build.cjs",
+    "test": "node tests/preview.cjs && node tests/blog.cjs"
+  }
+}

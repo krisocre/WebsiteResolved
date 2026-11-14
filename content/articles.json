@@ -1,0 +1,36 @@
+[
+  {
+    "slug":"google-rating-unchanged-after-review-removal",
+    "title":"One review removed. Why didn’t the stars move?",
+    "seoTitle":"Google Rating Unchanged After Removal? | ReputationResolved",
+    "description":"An original 1,744-scenario model explains why a one-star review removal can leave the displayed Google rating unchanged. Download the data and method.",
+    "dek":"An original model of 1,744 feasible rating states shows how a one-star removal can improve the average without changing the rounded score.",
+    "category":"Original analysis",
+    "date":"2026-11-12",
+    "image":"rating-visibility",
+    "imageAlt":"Modeled unchanged-score shares rise from zero at 10 and 25 starting reviews to 94.0 percent at 500 and 97.0 percent at 1,000 reviews.",
+    "dataset":"rating-visibility-scenarios.csv",
+    "datasetTitle":"One-star removal and one-decimal score visibility",
+    "datasetDescription":"1,744 feasible mathematical starting states across seven review-count groups. Constructed model data, not business observations or removal success rates.",
+    "variables":["Starting review count","Starting star-point total","Remaining star-point total","Modeled one-decimal score before and after removal","Unchanged-display indicator"],
+    "sources":["https://support.google.com/business/answer/4801187?hl=en","https://support.google.com/business/answer/4596773?hl=en"],
+    "related":"google-review-no-customer-record-evidence"
+  },
+  {
+    "slug":"google-review-no-customer-record-evidence",
+    "title":"No booking record? That doesn’t settle whether a review is fake.",
+    "seoTitle":"No Customer Record for a Google Review? | ReputationResolved",
+    "description":"Google review nicknames change what a customer-record search can prove. Explore 12 evidence scenarios, a source-linked matrix and a private evidence worksheet.",
+    "dek":"A public display name is a search clue, not a customer ID. A source-linked guide to separating an unexplained review from a documented policy concern.",
+    "category":"Evidence & policy",
+    "date":"2026-11-12",
+    "image":"review-evidence-matrix",
+    "imageAlt":"Twelve illustrative review-evidence cases mapped to three next steps: more context, policy assessment or Google's dedicated extortion report.",
+    "dataset":"review-evidence-matrix.csv",
+    "datasetTitle":"Google review evidence: twelve illustrative cases",
+    "datasetDescription":"An author-coded qualitative matrix of twelve constructed review-evidence examples with source links, inference limits and suggested reporting routes. Not Google decisions or measured customer outcomes.",
+    "variables":["Illustrative scenario","Observed clue","Supported conclusion","Unestablished inference","Suggested next step","Primary source URL"],
+    "sources":["https://support.google.com/maps/answer/9320433?hl=en","https://blog.google/products-and-platforms/products/maps/holiday-gemini-tips-new-explore-tab/","https://support.google.com/contributionpolicy/answer/7400114?hl=en","https://support.google.com/business/answer/16404809?hl=en"],
+    "related":"google-rating-unchanged-after-review-removal"
+  }
+]

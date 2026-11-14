@@ -1,0 +1,70 @@
+{
+  "title": "One-star removal and one-decimal score visibility",
+  "creator": "ReputationResolved",
+  "version": "1.0",
+  "date": "2026-11-12",
+  "data_kind": "Exhaustive mathematical enumeration within specified bounds; not observations",
+  "source_for_average": "https://support.google.com/business/answer/4801187?hl=en",
+  "assumptions": [
+    "One one-star rating is removed; no other rating changes.",
+    "Review counts are 10, 25, 50, 100, 250, 500 and 1000.",
+    "Integer starting star-point totals imply unrounded means from 4.0 to at most 4.9.",
+    "Remaining ratings must be feasible on the integer one-to-five-star scale.",
+    "The model rounds to one decimal with half-up ties; Google's exact presentation is not asserted.",
+    "Each feasible point total receives one row; this is not a probability distribution of businesses.",
+    "Rounded mean columns are descriptive; integer point/count columns reproduce exact calculations.",
+    "No pooled percentage, customer success rate, ranking effect, timing or revenue is estimated."
+  ],
+  "scenario_count": 1744,
+  "groups": [
+    {
+      "review_count": 10,
+      "feasible_states": 7,
+      "unchanged_states": 0,
+      "changed_states": 7,
+      "unchanged_percent": 0.0
+    },
+    {
+      "review_count": 25,
+      "feasible_states": 22,
+      "unchanged_states": 0,
+      "changed_states": 22,
+      "unchanged_percent": 0.0
+    },
+    {
+      "review_count": 50,
+      "feasible_states": 46,
+      "unchanged_states": 13,
+      "changed_states": 33,
+      "unchanged_percent": 28.26087
+    },
+    {
+      "review_count": 100,
+      "feasible_states": 91,
+      "unchanged_states": 64,
+      "changed_states": 27,
+      "unchanged_percent": 70.32967
+    },
+    {
+      "review_count": 250,
+      "feasible_states": 226,
+      "unchanged_states": 195,
+      "changed_states": 31,
+      "unchanged_percent": 86.283186
+    },
+    {
+      "review_count": 500,
+      "feasible_states": 451,
+      "unchanged_states": 424,
+      "changed_states": 27,
+      "unchanged_percent": 94.013304
+    },
+    {
+      "review_count": 1000,
+      "feasible_states": 901,
+      "unchanged_states": 874,
+      "changed_states": 27,
+      "unchanged_percent": 97.00333
+    }
+  ]
+}
