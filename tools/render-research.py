@@ -10,14 +10,16 @@ from matplotlib.ticker import FuncFormatter
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "assets" / "research"
 OUT.mkdir(parents=True, exist_ok=True)
-PAPER, INK, MUTED, WINE, LINE = "#fcf9f4", "#332c2d", "#6d6065", "#642f40", "#ded0c7"
+PAPER, INK, MUTED, WINE, LINE = "#f3f5f6", "#1a2b40", "#4f6071", "#163e70", "#c9d3de"
 plt.rcParams.update({"font.family":"DejaVu Sans", "font.size":11, "text.color":INK,
     "axes.labelcolor":MUTED, "xtick.color":MUTED, "ytick.color":INK,
     "figure.facecolor":PAPER, "axes.facecolor":PAPER, "svg.hashsalt":"reputationresolved-research-v1"})
 
 
 def save(fig, name):
-    fig.savefig(OUT / f"{name}.svg", metadata={"Date":"2026-11-12", "Creator":"ReputationResolved"})
+    svg_path = OUT / f"{name}.svg"
+    fig.savefig(svg_path, metadata={"Date":"2026-11-12", "Creator":"ReputationResolved"})
+    svg_path.write_text("\n".join(line.rstrip() for line in svg_path.read_text(encoding="utf-8").splitlines()) + "\n", encoding="utf-8")
     fig.savefig(OUT / f"{name}.png", dpi=150, metadata={"Date":"2026-11-12", "Creator":"ReputationResolved"})
     plt.close(fig)
 
@@ -54,8 +56,8 @@ def same_start(mobile=False):
     for i,count in enumerate(counts):
         total=44*count//10;after=(total-1)/(count-1)
         displayed=((20*(total-1)+(count-1))//(2*(count-1)))/10
-        ax.plot([4.4,after],[i,i],color="#b9988c",linewidth=3)
-        ax.scatter([4.4],[i],s=55,color="#d9c5ba",zorder=3)
+        ax.plot([4.4,after],[i,i],color="#7ba1ce",linewidth=3)
+        ax.scatter([4.4],[i],s=55,color="#c6d7ed",zorder=3)
         ax.scatter([after],[i],s=75,color=WINE,zorder=4)
         ax.text(4.92,i,f"4.4 → {displayed:.1f}",ha="right",va="center",fontsize=10 if mobile else 12,color=WINE,fontweight="bold")
     ax.set_yticks(range(4),[f"{count:,}" for count in counts]);ax.invert_yaxis()
@@ -69,7 +71,7 @@ def same_start(mobile=False):
 
 def evidence_matrix(document,mobile=False):
     cases=document["cases"];routes=["More context","Assess policy fit","Dedicated report"]
-    colors=["#87977e",WINE,"#b36a47"]
+    colors=["#337f83",WINE,"#63758d"]
     fig,ax=plt.subplots(figsize=(4.2,6.5) if mobile else (8,6.5),dpi=150)
     fig.subplots_adjust(left=.58 if mobile else .39,right=.96,top=.78,bottom=.12)
     for y,case in enumerate(cases):

@@ -1,5 +1,37 @@
 # ReputationResolved homepage — design review
 
+## Brighter neutrals and simpler hero pricing — November 14, 2026
+
+Lightened the shared backgrounds to warm neutrals while retaining the dark
+navy brand colour. Replaced the solid navy hero pricing panel with a light,
+bordered panel. Two aligned fee columns show USD $50 upfront and USD $125
+after successful removal. A compact conditional total and calculator link
+complete the panel. The assessment background is now a lighter neutral blue.
+Pricing, application scripts and article content remain unchanged.
+Before screenshots and source are in preview/pricing-refinement/before/.
+
+## Softer backgrounds and hero pricing — November 14, 2026
+
+Moved the page surfaces to soft grey and deepened the blue brand accent to
+#163e70. The hero's right-hand panel now shows the unchanged USD $50 upfront
+and $125 success fees per review, plus the $175 combined total if a review
+is removed. The panel links to the existing calculator. Pricing conditions,
+the assessment preview and the three-step process remain available.
+The shared palette, logo and research-figure colours match the deeper blue.
+
+## White-and-blue palette — November 14, 2026
+
+Replaced burgundy and slate with white surfaces, navy text, a restrained blue
+accent and pale-blue support panels. The service brief is now light, while
+the closing invitation uses deep navy. Updated the logo/favicon, form focus
+and control colours, journal accents and six research figures (SVG and PNG)
+to keep the brand consistent. Original chart data, labels and calculations
+are unchanged. Existing CSS class/token names are retained for compatibility.
+
+Homepage copy, layout, pricing and interaction scripts are unchanged. The
+browser theme colour is white. Original article HTML, metadata and source
+text remain intact. Screenshots and checks are in preview/blue-palette/.
+
 ## Professional homepage — November 14, 2026
 
 Replaced the cozy storefront treatment, handwritten accents and tilted paper

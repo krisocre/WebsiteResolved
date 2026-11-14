@@ -15,10 +15,12 @@ Open index.html directly, or run `npm run preview` from this folder and visit
 http://127.0.0.1:4176/. The static preview server binds to the local machine.
 There are no application dependencies or third-party frontend requests.
 
-The homepage uses slate, white and the existing burgundy brand accent, with
-locally served DM Sans, a structured service brief, clear fee rows and an open
-three-step process. Its page-specific home.css preserves the journal's existing
-editorial design. Body text and inputs remain 16px. The interactive concern
+The homepage uses bright neutral backgrounds, navy text and a deep-blue accent,
+with locally served DM Sans, a light hero panel showing the two fees side by
+side, and an open
+three-step process. The logo, journal styling and research figures share the
+same palette; the journal retains its editorial layout. Body text and inputs
+remain 16px. The interactive concern
 guide, partial-removal calculator and local form preview are unchanged.
 The original storefront and illustration assets remain available in assets/;
 they are no longer displayed on the homepage.

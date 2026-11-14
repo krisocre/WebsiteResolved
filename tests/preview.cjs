@@ -33,6 +33,13 @@ const server = createServer();
       assert.equal(await page.$$eval('h1', elements => elements.length), 1);
       assert.equal(await page.$eval('meta[name=robots]', element => element.content), 'noindex, nofollow');
       assert.equal(await page.$eval('#business-link', element => element.type === 'text' && !element.required && !element.hasAttribute('maxlength')), true);
+      const heroFees = await page.$$eval('.hero-price-row', rows => rows.map(row => ({ label: row.querySelector('dt strong').textContent, fee: row.querySelector('dd').textContent })));
+      assert.equal(heroFees.length, 2, 'Both per-review fees are visible in the hero');
+      assert.match(heroFees[0].label, /Upfront/);
+      assert.match(heroFees[0].fee, /US\$50per review/);
+      assert.match(heroFees[1].label, /After successful removal/);
+      assert.match(heroFees[1].fee, /US\$125per review removed/);
+      assert.match(await page.$eval('.hero-pricing-total', element => element.textContent), /US\$175/);
       const sizes = await page.evaluate(() => ({
         headline: parseFloat(getComputedStyle(document.querySelector('.hero h1')).fontSize),
         sectionHeading: parseFloat(getComputedStyle(document.querySelector('.pricing h2')).fontSize),
