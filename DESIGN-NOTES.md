@@ -1,5 +1,27 @@
 # ReputationResolved homepage — design review
 
+## Professional homepage — November 14, 2026
+
+Replaced the cozy storefront treatment, handwritten accents and tilted paper
+cards with a slate-and-white service presentation. The burgundy brand mark
+and CTA color remain. Sans-serif headings, a factual casework brief, clearer
+fee rows, a restrained form panel and an open numbered process establish a
+more professional hierarchy. Normal 16px body copy and inputs are retained.
+
+The homepage-only home.css is loaded after the shared styles and included in
+the static build. Journal pages, research data, shared styling, navigation JS
+and calculator/form JS are unchanged. Open Graph wording now matches the
+more direct service positioning. No credentials or customer results added.
+Fees remain USD $50 upfront and $125 per successful removal. The form is
+still a local preview; it sends nothing. No production deployment performed.
+
+Validation: npm run build and npm test passed, covering five homepage widths,
+first-screen CTA visibility, 44px quantity controls, keyboard navigation,
+calculator outcomes, local form preview/edit, no-JS safeguards, all internal
+links, twelve journal layouts and the existing research calculations. Browser
+checks found no horizontal overflow or external requests. Before screenshots
+are in preview/professional-home/before/; current screenshots are in preview/.
+
 ## Research journal — November 12, 2026
 
 Added a journal index, two substantial research articles and a two-card journal

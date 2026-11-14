@@ -25,11 +25,11 @@ const server = createServer();
       await page.evaluate(() => document.fonts.ready);
       const layout = await page.evaluate(() => {
         const cta = document.querySelector('.hero-cta').getBoundingClientRect();
-        return { width: innerWidth, overflow: document.documentElement.scrollWidth > innerWidth + 1, ctaBottom: cta.bottom, viewport: innerHeight, imageReady: document.querySelector('.hero-photo img').complete && document.querySelector('.hero-photo img').naturalWidth > 0, height: document.documentElement.scrollHeight };
+        return { width: innerWidth, overflow: document.documentElement.scrollWidth > innerWidth + 1, ctaBottom: cta.bottom, viewport: innerHeight, brandReady: document.querySelector('.brand img').complete && document.querySelector('.brand img').naturalWidth > 0, height: document.documentElement.scrollHeight };
       });
       assert.equal(layout.overflow, false, 'No horizontal overflow at ' + width);
       assert.ok(layout.ctaBottom < layout.viewport, 'Primary CTA is visible on the first screen at ' + width);
-      assert.equal(layout.imageReady, true);
+      assert.equal(layout.brandReady, true);
       assert.equal(await page.$$eval('h1', elements => elements.length), 1);
       assert.equal(await page.$eval('meta[name=robots]', element => element.content), 'noindex, nofollow');
       assert.equal(await page.$eval('#business-link', element => element.type === 'text' && !element.required && !element.hasAttribute('maxlength')), true);
@@ -49,8 +49,6 @@ const server = createServer();
       for (const href of await page.$$eval('a[href^="#"]', elements => elements.map(element => element.getAttribute('href')))) assert.ok(await page.$(href), 'Existing target ' + href);
       layouts.push({ ...layout, typography: sizes });
       if ([1440, 390].includes(width)) {
-        await page.$eval('.focus-art img', element => { element.loading = 'eager'; });
-        await page.waitForFunction(() => document.querySelector('.focus-art img').complete && document.querySelector('.focus-art img').naturalWidth > 0);
         await page.screenshot({ path: path.join(output, 'homepage-' + width + '.png'), fullPage: true });
         await page.screenshot({ path: path.join(output, 'first-screen-' + width + '.png') });
         await (await page.$('#assessment')).screenshot({ path: path.join(output, 'assessment-' + width + '.png') });
@@ -113,7 +111,7 @@ const server = createServer();
     assert.equal(await page.$eval('.submit-button', element => element.disabled), true, 'No accidental native submission without JS');
     assert.equal(await page.$eval('#panel-conflict', element => getComputedStyle(element).display !== 'none'), true, 'Concern content stays available without JS');
     fs.writeFileSync(path.join(output, 'checks.json'), JSON.stringify({ layouts, consoleErrors: errors, unexpectedRequests, pricing: 'USD 50 + 125 per successful removal', form: 'Local preview only; no submission, storage or tracking' }, null, 2));
-    console.log('PASS: five layouts, balanced headings and 16px text/inputs, first-screen CTA, local art/fonts/image, navigation/keyboard, partial-outcome USD pricing/count sync and limits, accessible concern tabs, native validation, unrestricted profile text, safe request preview/edit, FAQ and zero external requests or submissions.');
+    console.log('PASS: five layouts, balanced headings and 16px text/inputs, first-screen CTA, local branding/fonts, navigation/keyboard, partial-outcome USD pricing/count sync and limits, accessible concern tabs, native validation, unrestricted profile text, safe request preview/edit, FAQ and zero external requests or submissions.');
   } finally {
     if (browser) await browser.close(); server.closeAllConnections(); await new Promise(resolve => server.close(resolve));
   }

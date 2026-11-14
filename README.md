@@ -15,12 +15,13 @@ Open index.html directly, or run `npm run preview` from this folder and visit
 http://127.0.0.1:4176/. The static preview server binds to the local machine.
 There are no application dependencies or third-party frontend requests.
 
-The design uses warm ivory, burgundy and peach, locally served DM Sans/Lora
-fonts, a licensed illustrative storefront photo and an original SVG mark.
-The current revision keeps the original hand-drawn SVG art, layered photo,
-paper-style process chapters, interactive concern guide and calculator for
-partial-removal outcomes, with a more restrained professional scale: 16px
-body text and inputs, smaller headings, and more compact section spacing.
+The homepage uses slate, white and the existing burgundy brand accent, with
+locally served DM Sans, a structured service brief, clear fee rows and an open
+three-step process. Its page-specific home.css preserves the journal's existing
+editorial design. Body text and inputs remain 16px. The interactive concern
+guide, partial-removal calculator and local form preview are unchanged.
+The original storefront and illustration assets remain available in assets/;
+they are no longer displayed on the homepage.
 Google review assistance is the only service. No testimonials, ratings,
 customer results, credentials or business locations have been invented.
 
