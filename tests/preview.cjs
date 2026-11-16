@@ -36,10 +36,10 @@ const server = createServer();
       const heroFees = await page.$$eval('.hero-price-row', rows => rows.map(row => ({ label: row.querySelector('dt strong').textContent, fee: row.querySelector('dd').textContent })));
       assert.equal(heroFees.length, 2, 'Both per-review fees are visible in the hero');
       assert.match(heroFees[0].label, /Upfront/);
-      assert.match(heroFees[0].fee, /US\$50per review/);
+      assert.equal(heroFees[0].fee, '$50');
       assert.match(heroFees[1].label, /After successful removal/);
-      assert.match(heroFees[1].fee, /US\$125per review removed/);
-      assert.match(await page.$eval('.hero-pricing-total', element => element.textContent), /US\$175/);
+      assert.equal(heroFees[1].fee, '$125');
+      assert.match(await page.$eval('.hero-pricing-total', element => element.textContent), /\$175/);
       const sizes = await page.evaluate(() => ({
         headline: parseFloat(getComputedStyle(document.querySelector('.hero h1')).fontSize),
         sectionHeading: parseFloat(getComputedStyle(document.querySelector('.pricing h2')).fontSize),
